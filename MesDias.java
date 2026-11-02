@@ -4,26 +4,10 @@ public class MesDias {
         int mes = Integer.parseInt(System.console().readLine());
 
         switch (mes) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                System.out.println("el mes tiene 31 días");
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                System.out.println("el mes tiene 30 días");
-                break;
-            case 2:
-                System.out.println("el mes tiene 28 días en años comunes, 29 en años bisiestos");
-                break;
-            default:
-                break;
+            case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("el mes tiene 31 días");
+            case 4, 6 ,9,11 -> System.out.println("el mes tiene 30 días");
+            case 2-> System.out.println("el mes tiene 28 días en años comunes, 29 en años bisiestos");
+            default-> System.out.println("No tiene días el numero de mes que ingresaste");
         }
     }
 }
